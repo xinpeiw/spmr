@@ -118,7 +118,7 @@ var_est_binary_h0 = function(c1,c2,data2) {
   gz = W * as.numeric(y-miuhat)
   fiez = as.matrix(V * c1$residuals, ncol=ncol(V)) %*% solve(crossprod(V)) * nrow(data2)
   W_n = cbind(rhohat*miuhat*(1-miuhat)*W[,1:(ncol(W)-1)],
-              (delta1hat*rhohat*miuhat*(1-miuhat)-(y-miuhat)))
+              (c1$residuals*rhohat*miuhat*(1-miuhat)-(y-miuhat)))
   de = matrix(rep(NA,ncol(W_n)*ncol(V)), nrow = ncol(V), ncol = ncol(W_n))
   for (i in 1:ncol(V)) {
     for (j in 1:ncol(W_n)) {
@@ -144,6 +144,7 @@ var_est_binary_h1 = function(c1,c2,data2,h,h_d) {
   r2 = matrix(c2$residuals,ncol=1)
   etahat = c2$linear.predictors
   miuhat = c2$fitted.values
+  delta1hat = c1$residuals
   y = data2$y
   gz = W * as.numeric(y-miuhat)
   fiez = as.matrix(V * c1$residuals, ncol=ncol(V)) %*% solve(crossprod(V)) * nrow(data2)
