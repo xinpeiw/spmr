@@ -229,9 +229,9 @@ cf_para = function(d,
     f_coe = c2_coe[which(grepl('f_', names(c2_coe)))]
     # asymptotic variance
     if (is.null(h) & is.null(h_d)) {
-      sigma = var_est_gaussian_h0(c1,c2)
+      sigma = spmr::var_est_gaussian_h0(c1,c2)
     } else {
-      sigma = var_est_gaussian_h1(c1,c2,h,h_d)
+      sigma = spmr::var_est_gaussian_h1(c1,c2,h,h_d)
     }
   } else if (family == 'binary') {
     c2  = glm(y ~ ., data = data2, family = "binomial")
@@ -240,9 +240,9 @@ cf_para = function(d,
     f_coe = c2_coe[which(grepl('f', names(c2_coe)))]
     # asymptotic variance
     if (is.null(h) & is.null(h_d)) {
-      sigma = var_est_binary_h0(c1,c2,data2)
+      sigma = spmr::var_est_binary_h0(c1,c2,data2)
     } else {
-      sigma = var_est_binary_h1(c1,c2,data2,h,h_d)
+      sigma = spmr::var_est_binary_h1(c1,c2,data2,h,h_d)
     }
   }
 
