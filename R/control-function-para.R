@@ -39,6 +39,7 @@ format_cf = function(data, iv_col, covariate_col = NULL, exposure_col, outcome_c
     f_i = f[[i]](X)
     if (i==1) { f_d = f_i } else { f_d = cbind(f_d, f_i) }
   }
+  f_d = as.data.frame(f_d, ncol=nf)
   colnames(f_d) = paste0('f_',1:nf)
 
   if (!is.null(g)) {
