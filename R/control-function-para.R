@@ -188,9 +188,9 @@ cf_para = function(d,
   Z = d[,which(grepl('z_', colnames(d)))]
   C = d[,which(grepl('c_', colnames(d)))]
   if (length(C) == 0) {
-    data = cbind(d$x,Z)
+    data = as.data.frame(cbind(d$x,Z))
   } else {
-    data = cbind(d$x,Z,C)
+    data = as.data.frame(cbind(d$x,Z,C))
   }
   names(data)[1] = 'x'
   # Stage I - Estimation
