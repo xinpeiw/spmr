@@ -401,15 +401,15 @@ cf_semipara = function(d,
 
   if (family == 'gaussian') {
     if (action == 0) {
-      V = var_cal_gaussian_r(c1,c2,y)
+      V = var_cal_gaussian_r(c1,c2,data2$y)
     } else {
-      V = var_cal_gaussian_h(c1,c2,y,h_d)
+      V = var_cal_gaussian_h(c1,c2,data2$y,h_d)
     }
   } else if (family == 'binary') {
     if (action ==0 ) {
-      V = var_cal_binomial_r(c1,c2,y)
+      V = var_cal_binomial_r(c1,c2,data2$y)
     } else {
-      V = var_cal_binomial(c1,c2,y,h_est = h)
+      V = var_cal_binomial(c1,c2,data2$y,h_est = h)
     }
   }
 
