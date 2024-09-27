@@ -396,8 +396,8 @@ cf_semipara = function(d,
   } else {
     c2  = mgcv::gam(y ~ s(x,bs="cr")+g+h_r, data = data2, family = fa)
   }
-  mgcv::plot.gam(c2,rug = TRUE,se=TRUE,n=100,jit = TRUE,shade = TRUE,shade.col = "grey90",
-           cex.lab = 1.3,cex.axis=1.3)
+  #mgcv::plot.gam(c2,rug = TRUE,se=TRUE,n=100,jit = TRUE,shade = TRUE,shade.col = "grey90",
+    #       cex.lab = 1.3,cex.axis=1.3)
 
   if (family == 'gaussian') {
     if (action == 0) {
