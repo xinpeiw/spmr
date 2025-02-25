@@ -18,7 +18,7 @@ devtools::install_github("xinpeiw/spmr")
 | `format_cf` | Format data for the control function method | 
 | `format_cf_semipara` | Format data for the semi-parametric estimation method (spMR) | 
 | `sp_para` | Conduct the two-stage prediction estimation | 
-| `cf_para`  |  Control function method  | 
-| `cf_semipara` | Semi-parametric estimation method (spMR) | 
+| `cf_para`  |  Conduct the control function estimation  | 
+| `cf_semipara` | Conduct semi-parametric estimation (spMR) | 
 
 type `?function_name` to get more detailed parameter information for each function.
