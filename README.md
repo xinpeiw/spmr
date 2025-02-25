@@ -9,3 +9,16 @@ For statistical details, please refer to the article "Causal Estimation and Infe
 ## Installation
 ```r
 devtools::install_github("xinpeiw/spmr")
+```
+
+## Functions
+| Function name | Description   | 
+|--------|---------|
+| `format_sp` | Format data for the two-stage prediction method | 
+| `format_cf` | Format data for the control function method | 
+| `format_cf_semipara` | Format data for the semi-parametric estimation method (spMR) | 
+| `sp_para` | Conduct the two-stage prediction estimation | 
+| `cf_para`  |  Control function method  | 
+| `cf_semipara` | Semi-parametric estimation method (spMR) | 
+
+type `?function_name` to get more detailed parameter information for each function.
