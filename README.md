@@ -23,4 +23,4 @@ devtools::install_github("xinpeiw/spmr")
 
 type `?function_name` to get more detailed parameter information for each function.
 
-#### Feel free to reach out to Xinpei (xinpeiw at uchicago dot edu) if you have any problems:)
+#### Feel free to reach out to Xinpei (xinpeiw at uchicago dot edu) if you have any problems :)
